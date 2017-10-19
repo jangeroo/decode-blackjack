@@ -83,11 +83,23 @@ function getNewDeck() {
     .catch(error => console.log(error))
 }
 
+
 function computeScore(cards) {
-  // This function receives an array of cards and returns the total score.
-  // ...
-  var score = 21
-  return score
+    // This function receives an array of cards and returns the total score.
+    var score = 0
+    cards.forEach(card => {
+        card.value != 'ACE' ?
+            // Handle a non-Ace first, since Aces require special logic
+            (score = ['JACK', 'QUEEN', 'KING'].some((royal) => {return card.value == royal}) ?
+                score + 10 :    // Royals are always worth 10
+                score + parseInt(card.value)
+            ) :
+            // Otherwise handle an Ace
+            (score = score <= 10 ?
+                score + 11 :    // Get as close to 21 as possible without going over
+                score + 1)
+    })
+    return score
 }
 
 
