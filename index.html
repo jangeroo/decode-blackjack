@@ -1,40 +1,50 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="utf-8">
-    <title>jQuery BlackJack</title>
-    <link rel="stylesheet" type="text/css" href="./style.css">
-    <script src="https://code.jquery.com/jquery-3.2.1.js"
-        integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
-        crossorigin="anonymous"></script>
+  <meta charset="utf-8">
+  <title>jQuery BlackJack</title>
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <h1>jQuery BlackJack</h1>
-    <button id="new-game">Shuffle New Deck</button>
-    <div class="game-container">
-        <div id="game-area">
-            <div id="dealer-area">
-                <h2>Dealer (<span id="dealer-number"></span>)</h2>
-                <div id="dealer-cards">
-                    <!-- Cards will appear here. -->
-                </div>
-            </div>
-            <div id="player-area">
-                <h2>
-                    Player (<span id="player-number"></span>)
-                    <span id="announcement"></span>
-                </h2>
-                <div id="player-cards">
-                    <!-- Cards will appear here. -->
-                </div>
-            </div>
+  <h1>jQuery BlackJack</h1>
+
+  <button id="new-game">Shuffle New Deck</button>
+
+  <div class="game-container">
+    <div id="game-area">
+
+      <div id="dealer-area">
+        <h2>Dealer (
+          <span id="dealer-number"></span>)</h2>
+        <div id="dealer-cards">
+          <!-- Cards will appear here. -->
         </div>
-        <div id="action-area">
-            <button id="next-hand" style="display:none;">Next Hand</button>
-            <button id="hit-me" style="display:none;">Hit me</button>
-            <button id="stay" style="display:none;">I'll stay</button>
+      </div>
+
+      <div id="player-area">
+        <h2>
+          Player (
+          <span id="player-number"></span>)
+          <span id="announcement"></span>
+        </h2>
+        <div id="player-cards">
+          <!-- Cards will appear here. -->
         </div>
+      </div>
+
     </div>
-    <script type="text/javascript" src="./app.js"></script>
+
+    <div id="action-area">
+      <button id="next-hand" style="display:none;">Next Hand</button>
+      <button id="hit-me" style="display:none;">Hit me</button>
+      <button id="stay" style="display:none;">I'll stay</button>
+    </div>
+
+  </div>
+  <script type="text/javascript" src="./app.js"></script>
 </body>
+
 </html>
